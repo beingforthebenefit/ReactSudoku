@@ -12,12 +12,12 @@ export const Board: React.FC<BoardProps> = ({board, onCellChange}) => {
     };
 
     return (
-        <table className="board">
+        <table className="sudoku-board">
             <tbody>
                 {board.map((row, rowIndex) => (
-                    <tr key={rowIndex}>
+                    <tr key={rowIndex} className={`row-${rowIndex}`}>
                         {row.map((cell, colIndex) => (
-                            <td key={colIndex}>
+                            <td key={colIndex} className={`col-${colIndex}`}>
                                 <Cell
                                     value={cell}
                                     isEditable={cell === 0}
