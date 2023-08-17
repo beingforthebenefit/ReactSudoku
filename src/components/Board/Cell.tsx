@@ -17,7 +17,7 @@ export const Cell: React.FC<CellProps> = ({value, isEditable, onChange}) => {
             value={value || ''}
             onChange={handleChange}
             disabled={!isEditable}
-            className="cell"
+            className="sudoku-cell"
             min={1}
             max={9}
         />
