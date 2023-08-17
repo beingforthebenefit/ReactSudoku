@@ -1,18 +1,9 @@
 import React from 'react';
 import {Board} from './Board';
 import {Controls} from './Controls';
+import {generateSudoku} from '../utils/generateSudoku';
 
-const board = [
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [2, 0, 0, 5, 0, 0, 0, 0, 0],
-    [0, 8, 0, 0, 0, 0, 0, 7, 0],
-    [0, 0, 0, 0, 4, 0, 0, 0, 0],
-    [0, 6, 0, 0, 0, 0, 1, 0, 4],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [5, 0, 0, 0, 3, 0, 0, 0, 0],
-    [0, 0, 3, 0, 0, 0, 6, 0, 0],
-    [0, 0, 0, 0, 0, 7, 0, 0, 0],
-];
+const board = generateSudoku();
 
 const handleCellChange = (row: number, col: number, value: number) => {
     console.log(`Cell [${row}][${col}] changed to ${value}`);
